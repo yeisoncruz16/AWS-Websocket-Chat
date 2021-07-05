@@ -1,5 +1,5 @@
 service: awswebsocketchat
-frameworkVersion: "1.73.1"
+frameworkVersion: "1.77.1"
 
 custom:
   currentStage: ${opt:stage, self:provider.stage}
@@ -8,6 +8,7 @@ custom:
 
 provider:
   name: aws
+  profile: crazy
   iamManagedPolicies:
   - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
   runtime: ${self:custom.lambdaRunTime}
