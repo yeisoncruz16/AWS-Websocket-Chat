@@ -22,7 +22,7 @@ def handle(event, context):
     # Emit the recieved message to all the connected devices
     for connectionId in connectionIds:
         apigatewaymanagementapi.post_to_connection(
-            Data=message.replace('<', '&lt;').replace('>', '&gt;');
+            Data=message.replace('<', '&lt;'),
             ConnectionId=connectionId['connectionId']['S']
         )
 
